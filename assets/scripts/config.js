@@ -2,8 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://ga-library-api.herokuapp.com',
-    development: 'https://ga-library-api.herokuapp.com'
+    production: 'https://ga-wdi-boston.herokuapp.com'
   }
 }
 
