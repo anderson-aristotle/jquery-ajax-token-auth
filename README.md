@@ -41,12 +41,12 @@ https://ga-library-api.herokuapp.com.
 
 The operations we'll perform:
 
-| verb   | path                   | parameters |
-| ----   | ----                   | ---------- |
-| POST   | `/sign-up`             | `credentials` containing `email`, `password`, `password_confirmation` |
+| verb   | path                   | parameters                                                                    |
+| ------ | ---------------------- | ----------------------------------------------------------------------------- |
+| POST   | `/sign-up`             | `credentials` containing `email`, `password`, `password_confirmation`         |
 | POST   | `/sign-in`             | `credentials` containing `email` and `password` (response contains auth data) |
-| PATCH  | `/change-password/:id` | `passwords` containing `old` and `new` (requires Authorization header) |
-| DELETE | `/sign-out/:id`        | None (requires Authorization header) |
+| PATCH  | `/change-password/:id` | `passwords` containing `old` and `new` (requires Authorization header)        |
+| DELETE | `/sign-out/:id`        | None (requires Authorization header)                                          |
 
 ## CURL Gotchas
 
