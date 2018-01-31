@@ -139,6 +139,20 @@ request to our API to create an example.
 Now, let's add code to `assests/scripts/examples/*` to create an example from
 the browser.
 
+### Lab: Get all Examples
+
+Modify `scripts/examples/index.sh` to make an authenticated request to our
+API to get all examples.
+
+Add code to `assests/scripts/examples/*` to get all examples from the browser.
+
+### Lab: Get one Example
+
+Modify `scripts/examples/show.sh` to make an authenticated request to our
+API to get all examples.
+
+Add code to `assests/scripts/examples/*` to get an example from the browser.
+
 ### Lab: Destroy an Example
 
 Modify `scripts/examples/destroy.sh` to make an authenticated request to our
