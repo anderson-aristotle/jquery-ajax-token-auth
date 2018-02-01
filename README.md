@@ -88,7 +88,7 @@ registered with the API.
 
 ## Logging into the API
 
-### Code along: Write a sign-in script
+### Lab: Write a sign-in script
 
 Now with json data in `scripts/json/sign-in.sh`, let's sign in to the account
 we just created.
@@ -116,7 +116,7 @@ to change the password.
 
 Signing out invalidates the the current token.
 
-### Code along: Write/Execute a sign-out script
+### Lab: Write/Execute a sign-out script
 
 We'll use `scripts/sign-out.sh` to sign out of the API. We'll verify that the
 token we used is no longer valid.
@@ -131,6 +131,14 @@ out of the API.
 Now that we can sign up and sign in to our API, let's add and modify our own
 resources.
 
+| verb   | path                   | parameters                                                                    |
+| ------ | ---------------------- | ----------------------------------------------------------------------------- |
+| POST   | `/examples`            | `example` containing `text` (requires Authorization header)                   |
+| GET    | `/examples`            | None                                                                          |
+| GET    | `/examples/:id`        | None                                                                          |
+| PATCH  | `/examples/:id`        | `example` containing `text` (requires Authorization header)                   |
+| DELETE | `/examples/:id`        | None (requires Authorization header)                                          |
+
 ### Code along: Create an Example
 
 First, we'll modify `scripts/examples/create.sh` to make an authenticated
@@ -141,15 +149,15 @@ the browser.
 
 ### Lab: Get all Examples
 
-Modify `scripts/examples/index.sh` to make an authenticated request to our
-API to get all examples.
+Modify `scripts/examples/index.sh` to make a request to our API to get all
+examples.
 
 Add code to `assests/scripts/examples/*` to get all examples from the browser.
 
 ### Lab: Get one Example
 
-Modify `scripts/examples/show.sh` to make an authenticated request to our
-API to get all examples.
+Modify `scripts/examples/show.sh` to make a request to our API to get one
+example.
 
 Add code to `assests/scripts/examples/*` to get an example from the browser.
 
