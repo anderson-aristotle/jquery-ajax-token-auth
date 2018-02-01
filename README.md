@@ -134,8 +134,8 @@ resources.
 | verb   | path                   | parameters                                                                    |
 | ------ | ---------------------- | ----------------------------------------------------------------------------- |
 | POST   | `/examples`            | `example` containing `text` (requires Authorization header)                   |
-| GET    | `/examples`            | None                                                                          |
-| GET    | `/examples/:id`        | None                                                                          |
+| GET    | `/examples`            | None (requires Authorization header)                                          |
+| GET    | `/examples/:id`        | None (requires Authorization header)                                          |
 | PATCH  | `/examples/:id`        | `example` containing `text` (requires Authorization header)                   |
 | DELETE | `/examples/:id`        | None (requires Authorization header)                                          |
 
