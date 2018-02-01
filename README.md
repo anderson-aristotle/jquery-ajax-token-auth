@@ -114,7 +114,7 @@ to change the password.
 
 ## Signing out
 
-Signing out invalidates the the current token.
+Signing out invalidates the current token.
 
 ### Lab: Write/Execute a sign-out script
 
