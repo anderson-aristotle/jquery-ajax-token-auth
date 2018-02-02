@@ -107,7 +107,7 @@ What should we do with the data returned by the API?
 We'll use `scripts/json/change-password.sh` to change a password. After that
 we'll verify that we can no longer authenticate using the old password.
 
-### Lab: Change password from the client
+### Code along: Change password from the client
 
 Add a change password form to `index.html` and code to `assets/scripts/auth/*`
 to change the password.
