@@ -190,6 +190,7 @@ Developers should run these often!
 ## Additional Resources
 
 - [httpbin.org](http://httpbin.org/post)
+- [Differences in json & x-www-form-urlencoded](https://stackoverflow.com/questions/9870523/differences-in-application-json-and-application-x-www-form-urlencoded)
 
 ## [License](LICENSE)
 
