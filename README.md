@@ -6,7 +6,7 @@
 
 Using curl and jQuery.ajax to access an authenticated API with html forms to
 sign up, sign in, and sign out of an API. We'll also change our passwords. The
-API uses Token authentication and we'll see how to make authenticated request
+API uses Token authentication and we'll see how to make authenticated requests
 (sign out and change password).
 
 ## Prerequisites
@@ -41,12 +41,12 @@ https://ga-library-api.herokuapp.com.
 
 The operations we'll perform:
 
-| verb   | path                   | parameters |
-| ----   | ----                   | ---------- |
-| POST   | `/sign-up`             | `credentials` containing `email`, `password`, `password_confirmation` |
+| verb   | path                   | parameters                                                                    |
+| ------ | ---------------------- | ----------------------------------------------------------------------------- |
+| POST   | `/sign-up`             | `credentials` containing `email`, `password`, `password_confirmation`         |
 | POST   | `/sign-in`             | `credentials` containing `email` and `password` (response contains auth data) |
-| PATCH  | `/change-password/:id` | `passwords` containing `old` and `new` (requires Authorization header) |
-| DELETE | `/sign-out/:id`        | None (requires Authorization header) |
+| PATCH  | `/change-password/:id` | `passwords` containing `old` and `new` (requires Authorization header)        |
+| DELETE | `/sign-out/:id`        | None (requires Authorization header)                                          |
 
 ## CURL Gotchas
 
@@ -88,7 +88,7 @@ registered with the API.
 
 ## Logging into the API
 
-### Code along: Write a sign-in script
+### Lab: Write a sign-in script
 
 Now with json data in `scripts/json/sign-in.sh`, let's sign in to the account
 we just created.
@@ -107,16 +107,16 @@ What should we do with the data returned by the API?
 We'll use `scripts/json/change-password.sh` to change a password. After that
 we'll verify that we can no longer authenticate using the old password.
 
-### Lab: Change password from the client
+### Code along: Change password from the client
 
 Add a change password form to `index.html` and code to `assets/scripts/auth/*`
 to change the password.
 
 ## Signing out
 
-Signing out invalidates the the current token.
+Signing out invalidates the current token.
 
-### Code along: Write/Execute a sign-out script
+### Lab: Write/Execute a sign-out script
 
 We'll use `scripts/sign-out.sh` to sign out of the API. We'll verify that the
 token we used is no longer valid.
@@ -131,6 +131,14 @@ out of the API.
 Now that we can sign up and sign in to our API, let's add and modify our own
 resources.
 
+| verb   | path                   | parameters                                                                    |
+| ------ | ---------------------- | ----------------------------------------------------------------------------- |
+| POST   | `/examples`            | `example` containing `text` (requires Authorization header)                   |
+| GET    | `/examples`            | None (requires Authorization header)                                          |
+| GET    | `/examples/:id`        | None (requires Authorization header)                                          |
+| PATCH  | `/examples/:id`        | `example` containing `text` (requires Authorization header)                   |
+| DELETE | `/examples/:id`        | None (requires Authorization header)                                          |
+
 ### Code along: Create an Example
 
 First, we'll modify `scripts/examples/create.sh` to make an authenticated
@@ -138,6 +146,20 @@ request to our API to create an example.
 
 Now, let's add code to `assests/scripts/examples/*` to create an example from
 the browser.
+
+### Lab: Get all Examples
+
+Modify `scripts/examples/index.sh` to make a request to our API to get all
+examples.
+
+Add code to `assests/scripts/examples/*` to get all examples from the browser.
+
+### Lab: Get one Example
+
+Modify `scripts/examples/show.sh` to make a request to our API to get one
+example.
+
+Add code to `assests/scripts/examples/*` to get an example from the browser.
 
 ### Lab: Destroy an Example
 
@@ -159,15 +181,16 @@ Developers should run these often!
 
 - `grunt nag` or just `grunt`: runs code quality analysis tools on your code
     and complains
-- `grunt reformat`: reformats all your code in a standard style
-- `grunt <server|serve|s>`: generates bundles, watches, and livereloads
-- `grunt test`: runs any automated tests, depends on `grunt build`
-- `grunt build`: place bundled styles and scripts where `index.html` can find
+-   `grunt make-standard`: reformats all your code in the JavaScript Standard Style
+-   `grunt <server|serve|s>`: generates bundles, watches, and livereloads
+-   `grunt test`: runs any automated tests, depends on `grunt build`
+-   `grunt build`: place bundled styles and scripts where `index.html` can find
     them
 
 ## Additional Resources
 
 - [httpbin.org](http://httpbin.org/post)
+- [Differences in json & x-www-form-urlencoded](https://stackoverflow.com/questions/9870523/differences-in-application-json-and-application-x-www-form-urlencoded)
 
 ## [License](LICENSE)
 
