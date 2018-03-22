@@ -45,8 +45,8 @@ The operations we'll perform:
 | ------ | ---------------------- | ----------------------------------------------------------------------------- |
 | POST   | `/sign-up`             | `credentials` containing `email`, `password`, `password_confirmation`         |
 | POST   | `/sign-in`             | `credentials` containing `email` and `password` (response contains auth data) |
-| PATCH  | `/change-password/:id` | `passwords` containing `old` and `new` (requires Authorization header)        |
-| DELETE | `/sign-out/:id`        | None (requires Authorization header)                                          |
+| PATCH  | `/change-password`     | `passwords` containing `old` and `new` (requires Authorization header)        |
+| DELETE | `/sign-out`            | None (requires Authorization header)                                          |
 
 ## CURL Gotchas
 
