@@ -57,3 +57,4 @@
 
 ![JS file chain](https://git.generalassemb.ly/storage/user/3667/files/c23457da-c235-11e7-8b44-237f2d6e3524
 )
+![Token being passed back and forth](https://git.generalassemb.ly/storage/user/3667/files/5ed23c48-0a79-11e8-98a6-f96b90e02c50)
