@@ -37,7 +37,7 @@ to register and then login to gain an authentication token.
 
 We'll use `curl` and `jQuery.ajax` to explore HTTP further. Then we'll make
 requests to and receive responses from a HTTP server hosted at
-https://ga-library-api.herokuapp.com.
+https://wdi-library-api.herokuapp.com.
 
 The operations we'll perform:
 
@@ -71,13 +71,13 @@ scripts.
 
 Let's register with the API.
 
-We'll first modify `scripts/url-encoded/sign-up.sh` to send a request with
-_urlencoded_ data to the `ga-library-api`.
+We'll first modify `curl-scripts/url-encoded/sign-up.sh` to send a request with
+_urlencoded_ data to the `wdi-library-api`.
 
 - What response do we receive from the API?
 
-Now we'll modify `scripts/json/sign-up.sh` to send a request with _json_ data to
-the `ga-library-api`.
+Now we'll modify `curl-scripts/json/sign-up.sh` to send a request with _json_
+data to the `wdi-library-api`.
 
 How is the API response different from sending urlencoded vs json data?
 
@@ -90,8 +90,8 @@ registered with the API.
 
 ### Lab: Write a sign-in script
 
-Now with json data in `scripts/json/sign-in.sh`, let's sign in to the account
-we just created.
+Now with json data in `curl-scripts/json/sign-in.sh`, let's sign in to the
+account we just created.
 
 ### Lab: Sign-in from the client
 
@@ -104,8 +104,8 @@ What should we do with the data returned by the API?
 
 ### Code along: Write/Execute a change-password scripts
 
-We'll use `scripts/json/change-password.sh` to change a password. After that
-we'll verify that we can no longer authenticate using the old password.
+We'll use `curl-scripts/json/change-password.sh` to change a password. After
+that we'll verify that we can no longer authenticate using the old password.
 
 ### Code along: Change password from the client
 
@@ -118,8 +118,8 @@ Signing out invalidates the current token.
 
 ### Lab: Write/Execute a sign-out script
 
-We'll use `scripts/sign-out.sh` to sign out of the API. We'll verify that the
-token we used is no longer valid.
+We'll use `curl-scripts/sign-out.sh` to sign out of the API. We'll verify that
+the token we used is no longer valid.
 
 ### Lab: Sign out from the client
 
@@ -141,7 +141,7 @@ resources.
 
 ### Code along: Create an Example
 
-First, we'll modify `scripts/examples/create.sh` to make an authenticated
+First, we'll modify `curl-scripts/examples/create.sh` to make an authenticated
 request to our API to create an example.
 
 Now, let's add code to `assests/scripts/examples/*` to create an example from
@@ -149,28 +149,28 @@ the browser.
 
 ### Lab: Get all Examples
 
-Modify `scripts/examples/index.sh` to make a request to our API to get all
+Modify `curl-scripts/examples/index.sh` to make a request to our API to get all
 examples.
 
 Add code to `assests/scripts/examples/*` to get all examples from the browser.
 
 ### Lab: Get one Example
 
-Modify `scripts/examples/show.sh` to make a request to our API to get one
+Modify `curl-scripts/examples/show.sh` to make a request to our API to get one
 example.
 
 Add code to `assests/scripts/examples/*` to get an example from the browser.
 
 ### Lab: Destroy an Example
 
-Modify `scripts/examples/destroy.sh` to make an authenticated request to our
-API to destroy an example.
+Modify `curl-scripts/examples/destroy.sh` to make an authenticated request to
+our API to destroy an example.
 
 Add code to `assests/scripts/examples/*` to destroy an example from the browser.
 
 ### Lab: Update an Example
 
-Modify `scripts/examples/update.sh` to make an authenticated request to our
+Modify `curl-scripts/examples/update.sh` to make an authenticated request to our
 API to update an example.
 
 Add code to `assests/scripts/examples/*` to update an example from the browser.

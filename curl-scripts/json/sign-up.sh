@@ -1,8 +1,6 @@
-#!/bin/bash
+# sh curl-scripts/json/sign-up.sh
 
-# sh scripts/json/sign-up.sh
-
-curl "https://ga-library-api.herokuapp.com/sign-up" \
+curl "https://wdi-library-api.herokuapp.com/sign-up" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
