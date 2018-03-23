@@ -1,10 +1,17 @@
 'use strict'
 
-const config = {
-  apiOrigins: {
-    production: 'https://ga-library-api.herokuapp.com',
-    development: 'https://ga-library-api.herokuapp.com'
-  }
+let apiUrl
+const apiUrls = {
+  production: 'https://wdi-library-api.herokuapp.com',
+  development: 'https://wdi-library-api.herokuapp.com'
 }
 
-module.exports = config
+if (window.location.hostname === 'localhost') {
+  apiUrl = apiUrls.development
+} else {
+  apiUrl = apiUrls.production
+}
+
+module.exports = {
+  apiUrl
+}
