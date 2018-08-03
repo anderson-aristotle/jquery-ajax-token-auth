@@ -48,6 +48,15 @@ The operations we'll perform:
 | PATCH  | `/change-password`     | `passwords` containing `old` and `new` (requires Authorization header)        |
 | DELETE | `/sign-out`            | None (requires Authorization header)                                          |
 
+## Important Security Note
+
+The APIs we work with in WDI are built for educational purposes only, and
+therefore are **not secure** enough to protect sensitive, real world data. What
+this means is that you must **never** use a real email or password when signing
+up for these accounts. It would not be difficult for someone with bad intentions
+to decrypt your password, and if you've used that password same for real life
+accounts (email, etc) they could gain access.
+
 ## CURL Gotchas
 
 We'll be using a lot of curl scripts as we send requests to our API, so it's
