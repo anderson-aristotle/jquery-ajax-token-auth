@@ -1,65 +1,46 @@
-# Forms
+### How to use `getFormFields`
 
-Developers should use `getFormFields` to retrieve data from html forms for API
- requests.
+To be able to send data to an API, we'll need a way to retrieve that data from
+forms in the DOM. It turns out that needing to grab some user
+input and send it to the API is a very common problem in front-end web
+development.
 
-`getFormFields` only retrieves data from form elements with a name attribute.
+To help solve that problem, we've included a function called `getFormFields` in
+this template. Let's take a look at how to use that function. In this example,
+the user is inputting information about a book.
 
-The object returned can be used to validate the form data.
+First, your `<input>`s will need to be wrapped in a `<form>`, like this:
 
-**in `api.js`**
+```html
+<form id="create-book">
+  <input name="book[title]" type="text">
+  <input name="book[author]" type="text">
+  <button type="submit">Create Book</button>
+</form>
+```
+Then, in your Javascript, you'd do something like this:
 
 ```js
-'use strict';
+const getFormFields = require('<path to lib>/get-form-fields.js')
 
-const ajaxDefaults = {
-  url: 'http://localhost:3000',
-};
+$('#create-book').on('submit', function (event) {
+  event.preventDefault()
 
-const myRequest = (data, success, fail) => {
-  $.ajax(Object.assign({ method: 'POST', data }, ajaxDefaults))
-  .done(success)
-  .fail(fail);
-};
-
-module.exports = {
-  myRequest,
-};
+  const form = event.target
+  const bookData = getFormFields(form)
+})
 ```
 
-**in `ui.js`**
+Then, the `bookData` variable would look like this:
 
 ```js
-'use strict';
-
-const success = (data) => {
-  // handle success
-};
-
-const failure = (err) => {
-  // handle failure
-};
-
-module.exports = {
-  success,
-  failure,
+{
+  book: {
+    title: "<whatever was entered in the title input >",
+    author: "<whatever was entered in the author input>"
+  }
 }
 ```
 
-**in `index.js`**
-
-```js
-'use strict';
-
-const getFormFields = require('../../lib/get-form-fields');
-const api = require('./api');
-const ui = require('./ui');
-
-$(() => {
-  $('#my-form').on('submit', function (e) {
-    let data = getFormFields(this);
-    e.preventDefault();
-    api.myRequest(data, ui.success, ui.failure);
-  });
-});
-```
+Note that in your projects, the code above will be spread out over several
+files.

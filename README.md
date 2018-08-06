@@ -48,6 +48,15 @@ The operations we'll perform:
 | PATCH  | `/change-password`     | `passwords` containing `old` and `new` (requires Authorization header)        |
 | DELETE | `/sign-out`            | None (requires Authorization header)                                          |
 
+## Important Security Note
+
+The APIs we work with in WDI are built for educational purposes only, and
+therefore are **not secure** enough to protect sensitive, real world data. What
+this means is that you must **never** use a real email or password when signing
+up for these accounts. It would not be difficult for someone with bad intentions
+to decrypt your password, and if you've used that password same for real life
+accounts (email, etc) they could gain access.
+
 ## CURL Gotchas
 
 We'll be using a lot of curl scripts as we send requests to our API, so it's
@@ -71,15 +80,10 @@ scripts.
 
 Let's register with the API.
 
-We'll first modify `curl-scripts/url-encoded/sign-up.sh` to send a request with
-_urlencoded_ data to the `wdi-library-api`.
-
-- What response do we receive from the API?
-
-Now we'll modify `curl-scripts/json/sign-up.sh` to send a request with _json_
+We'll modify `curl-scripts/sign-up.sh` to send a request with JSON
 data to the `wdi-library-api`.
 
-How is the API response different from sending urlencoded vs json data?
+What response do we get?
 
 ### Code along: Sign-up from our client
 
@@ -90,7 +94,7 @@ registered with the API.
 
 ### Lab: Write a sign-in script
 
-Now with json data in `curl-scripts/json/sign-in.sh`, let's sign in to the
+Now with json data in `curl-scripts/sign-in.sh`, let's sign in to the
 account we just created.
 
 ### Lab: Sign-in from the client
@@ -104,7 +108,7 @@ What should we do with the data returned by the API?
 
 ### Code along: Write/Execute a change-password scripts
 
-We'll use `curl-scripts/json/change-password.sh` to change a password. After
+We'll use `curl-scripts/change-password.sh` to change a password. After
 that we'll verify that we can no longer authenticate using the old password.
 
 ### Code along: Change password from the client
@@ -179,11 +183,10 @@ Add code to `assests/scripts/examples/*` to update an example from the browser.
 
 Developers should run these often!
 
-- `grunt nag` or just `grunt`: runs code quality analysis tools on your code
+- `grunt nag`: runs code quality analysis tools on your code
     and complains
 - `grunt make-standard`: reformats all your code in the JavaScript Standard Style
 - `grunt <server|serve|s>`: generates bundles, watches, and livereloads
-- `grunt test`: runs any automated tests, depends on `grunt build`
 - `grunt build`: place bundled styles and scripts where `index.html` can find
     them
 
