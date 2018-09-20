@@ -55,6 +55,6 @@
 
 ## Diagrams
 
-![JS file chain](https://git.generalassemb.ly/storage/user/3667/files/c23457da-c235-11e7-8b44-237f2d6e3524
+![JS file chain](https://git.generalassemb.ly/storage/user/3667/files/1cb26748-2eb9-11e8-9090-b9e159d3bb58
 )
 ![Token being passed back and forth](https://git.generalassemb.ly/storage/user/3667/files/5ed23c48-0a79-11e8-98a6-f96b90e02c50)

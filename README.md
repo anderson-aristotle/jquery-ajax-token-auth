@@ -37,7 +37,7 @@ to register and then login to gain an authentication token.
 
 We'll use `curl` and `jQuery.ajax` to explore HTTP further. Then we'll make
 requests to and receive responses from a HTTP server hosted at
-https://wdi-library-api.herokuapp.com.
+`https://wdi-library-api.herokuapp.com`.
 
 The operations we'll perform:
 
