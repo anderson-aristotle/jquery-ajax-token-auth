@@ -55,6 +55,6 @@
 
 ## Diagrams
 
-![JS file chain](https://git.generalassemb.ly/storage/user/3667/files/1cb26748-2eb9-11e8-9090-b9e159d3bb58
-)
+<img src="https://git.generalassemb.ly/ga-wdi-pvd/lesson-notes/blob/master/non-lesson-notes/browser-template-pattern-info/images/diagram.svg?sanitize=true" />
+
 ![Token being passed back and forth](https://git.generalassemb.ly/storage/user/3667/files/5ed23c48-0a79-11e8-98a6-f96b90e02c50)
