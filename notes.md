@@ -56,4 +56,6 @@
 
 <img src="https://git.generalassemb.ly/ga-wdi-pvd/lesson-notes/blob/master/non-lesson-notes/browser-template-pattern-info/images/diagram.svg?sanitize=true" />
 
+[more details about browser template](https://git.generalassemb.ly/ga-wdi-pvd/lesson-notes/tree/master/non-lesson-notes/browser-template-pattern-info)
+
 ![Token being passed back and forth](https://git.generalassemb.ly/storage/user/3667/files/5ed23c48-0a79-11e8-98a6-f96b90e02c50)
