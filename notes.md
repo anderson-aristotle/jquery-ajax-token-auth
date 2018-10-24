@@ -21,7 +21,7 @@
 - What language is curl? (NOT JS)
 - What language is ajax (JS)
 - What language is the server? (doesn't matter - we are working with the client)
-- Curl Debugging steps: ![](https://files.slack.com/files-pri/T0351JZQ0-F5C8B3RGR/image_uploaded_from_ios.jpg)
+- Curl Debugging steps: ![curl debugging steps](https://files.slack.com/files-pri/T0351JZQ0-F5C8B3RGR/image_uploaded_from_ios.jpg)
 
 ### Curl HEADER
 
