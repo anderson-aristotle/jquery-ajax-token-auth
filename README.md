@@ -87,7 +87,7 @@ scripts.
 
 Let's register with the API.
 
-We'll modify `curl-scripts/sign-up.sh` to send a request with JSON
+We'll modify `curl-scripts/auth/sign-up.sh` to send a request with JSON
 data to the `wdi-library-api`.
 
 What response do we get?
@@ -101,7 +101,7 @@ registered with the API.
 
 ### Lab: Write a sign-in script
 
-Now with json data in `curl-scripts/sign-in.sh`, let's sign in to the
+Now with json data in `curl-scripts/auth/sign-in.sh`, let's sign in to the
 account we just created.
 
 ### Lab: Sign-in from the client
@@ -115,7 +115,7 @@ What should we do with the data returned by the API?
 
 ### Code along: Write/Execute a change-password scripts
 
-We'll use `curl-scripts/change-password.sh` to change a password. After
+We'll use `curl-scripts/auth/change-password.sh` to change a password. After
 that we'll verify that we can no longer authenticate using the old password.
 
 ### Code along: Change password from the client
@@ -129,7 +129,7 @@ Signing out invalidates the current token.
 
 ### Lab: Write/Execute a sign-out script
 
-We'll use `curl-scripts/sign-out.sh` to sign out of the API. We'll verify that
+We'll use `curl-scripts/auth/sign-out.sh` to sign out of the API. We'll verify that
 the token we used is no longer valid.
 
 ### Lab: Sign out from the client
