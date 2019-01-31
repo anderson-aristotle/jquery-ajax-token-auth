@@ -1,4 +1,4 @@
-# sh curl-scripts/json/sign-in.sh
+# VARIABLE=VALUE sh curl-scripts/auth/sign-in.sh
 
 curl "https://wdi-library-api.herokuapp.com/sign-in" \
   --include \
