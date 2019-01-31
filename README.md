@@ -128,8 +128,8 @@ the token we used is no longer valid.
 
 ### Lab: Sign out from the client
 
-Add a sign out form to `index.html` and code to `assets/scripts/auth/*` to sign
-out of the API.
+Add a sign out button to `index.html` and code to `assets/scripts/auth/*` to
+sign out of the API.
 
 ## Authenticated Resources
 
