@@ -40,6 +40,9 @@ We'll use `curl` and `jQuery.ajax` to explore HTTP further. Then we'll make
 requests to and receive responses from a HTTP server hosted at
 `https://wdi-library-api.herokuapp.com`.
 
+We'll make use of the [WDI Library API docs](https://git.generalassemb.ly/ga-wdi-boston/library-api)
+to help us make the correct requests to the API.
+
 The operations we'll perform:
 
 | verb   | path                   | parameters                                                                    |
@@ -74,6 +77,9 @@ scripts.
     those constants. (i.e. `TITLE='Ancillary Justice'`).
     - Spaces between values assigned to variables in the terminal **are not**
       valid and **will not** run your curl script.
+
+1. *Curl Script execution example:*
+   `EMAIL=pikachu PASSWORD=pikachu sh curl-scripts/auth/sign-up.sh`
 
 ## Registering with the API
 
