@@ -16,17 +16,18 @@ API uses Token authentication and we'll see how to make authenticated requests
 
 ## Objectives
 
-By the end of this talk, developers should be able to:
+By the end of this, developers should be able to:
 
 - Make HTTP requests using `curl`, the browser address bar, and AJAX to:
   - access an authenticated API.
 
-## Instructions
+## Preparation
 
-1. [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
-   this repository.
-1. Create a new branch, `training`, for your work.
-1. Install dependencies with `npm install`.
+1.  Fork and clone this repository.
+ [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  Create a new branch, `training`, for your work.
+1.  Checkout to the `training` branch.
+1.  Install dependencies with `npm install`.
 
 ## Using web APIs
 
