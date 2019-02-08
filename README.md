@@ -16,16 +16,17 @@ API uses Token authentication and we'll see how to make authenticated requests
 
 ## Objectives
 
-By the end of this talk, developers should be able to:
+By the end of this, developers should be able to:
 
 - Make HTTP requests using `curl`, the browser address bar, and AJAX to:
   - access an authenticated API.
 
-## Instructions
+## Preparation
 
-1. [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
-   this repository.
+1. Fork and clone this repository.
+ [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
 1. Create a new branch, `training`, for your work.
+1. Checkout to the `training` branch.
 1. Install dependencies with `npm install`.
 
 ## Using web APIs
@@ -38,6 +39,9 @@ to register and then login to gain an authentication token.
 We'll use `curl` and `jQuery.ajax` to explore HTTP further. Then we'll make
 requests to and receive responses from a HTTP server hosted at
 `https://wdi-library-api.herokuapp.com`.
+
+We'll make use of the [WDI Library API docs](https://git.generalassemb.ly/ga-wdi-boston/library-api)
+to help us make the correct requests to the API.
 
 The operations we'll perform:
 
@@ -74,13 +78,16 @@ scripts.
     - Spaces between values assigned to variables in the terminal **are not**
       valid and **will not** run your curl script.
 
+1. *Curl Script execution example:*
+   `EMAIL=pikachu PASSWORD=pikachu sh curl-scripts/auth/sign-up.sh`
+
 ## Registering with the API
 
 ### Code along: Write a sign-up script
 
 Let's register with the API.
 
-We'll modify `curl-scripts/sign-up.sh` to send a request with JSON
+We'll modify `curl-scripts/auth/sign-up.sh` to send a request with JSON
 data to the `wdi-library-api`.
 
 What response do we get?
@@ -94,7 +101,7 @@ registered with the API.
 
 ### Lab: Write a sign-in script
 
-Now with json data in `curl-scripts/sign-in.sh`, let's sign in to the
+Now with json data in `curl-scripts/auth/sign-in.sh`, let's sign in to the
 account we just created.
 
 ### Lab: Sign-in from the client
@@ -108,7 +115,7 @@ What should we do with the data returned by the API?
 
 ### Code along: Write/Execute a change-password scripts
 
-We'll use `curl-scripts/change-password.sh` to change a password. After
+We'll use `curl-scripts/auth/change-password.sh` to change a password. After
 that we'll verify that we can no longer authenticate using the old password.
 
 ### Code along: Change password from the client
@@ -122,13 +129,13 @@ Signing out invalidates the current token.
 
 ### Lab: Write/Execute a sign-out script
 
-We'll use `curl-scripts/sign-out.sh` to sign out of the API. We'll verify that
+We'll use `curl-scripts/auth/sign-out.sh` to sign out of the API. We'll verify that
 the token we used is no longer valid.
 
 ### Lab: Sign out from the client
 
-Add a sign out form to `index.html` and code to `assets/scripts/auth/*` to sign
-out of the API.
+Add a sign out button to `index.html` and code to `assets/scripts/auth/*` to
+sign out of the API.
 
 ## Authenticated Resources
 
